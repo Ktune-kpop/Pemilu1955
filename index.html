@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMILU 1955: Mesin Waktu Pesta Demokrasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-accent font-sans-content">
+
+    <nav class="fixed top-0 left-0 right-0 bg-secondary-sepia bg-opacity-95 shadow-lg z-50 p-3 hidden md:block backdrop-blur-sm">
+        <div class="container mx-auto flex justify-center space-x-8 text-sm">
+            <a href="#latar-belakang" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Latar Belakang</a>
+            <a href="#raksasa" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Peserta</a>
+            <a href="#coblosan" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Proses & Hasil</a>
+            <a href="#galeri" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Galeri</a>
+            <a href="#refleksi" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Refleksi</a>
+            <a href="#kuis" class="text-primary-sepia font-semibold hover:text-white transition duration-200">Kuis</a>
+        </div>
+    </nav>
+
+    <nav class="md:hidden fixed top-0 left-0 right-0 bg-secondary-sepia bg-opacity-95 shadow-lg z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+        <a href="#beranda" class="font-serif-title text-primary-sepia text-xl">Pemilu 1955</a>
+        <button id="hamburger-btn" class="text-primary-sepia z-[60]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-3/4 bg-primary-sepia z-50 shadow-xl p-8 pt-24">
+        <div class="flex flex-col space-y-6 text-right">
+            <a href="#latar-belakang" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Latar Belakang</a>
+            <a href="#raksasa" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Peserta</a>
+            <a href="#coblosan" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Proses & Hasil</a>
+            <a href="#galeri" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Galeri</a>
+            <a href="#refleksi" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Refleksi</a>
+            <a href="#kuis" class="mobile-nav-link text-accent hover:text-highlight text-lg font-semibold">Kuis</a>
+        </div>
+    </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+
+
+    <section id="beranda" class="h-screen w-full flex items-center justify-center relative bg-cover bg-center sepia-filter overflow-hidden"
+        style="background-image: url('public/img/hero-sukarno-1955.png');">
+        
+        <div class="absolute inset-0 bg-accent bg-opacity-75"></div> 
+        
+        <div class="absolute top-1/4 left-1/4 w-32 h-32 md:w-48 md:h-48 opacity-15 mix-blend-soft-light" 
+             style="background-image: url('public/img/logo-pni.png'); background-size: contain; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(200%); transform: translate(-50%, -50%) rotate(-15deg);">
+        </div>
+        <div class="absolute top-1/4 right-1/4 w-32 h-32 md:w-48 md:h-48 opacity-15 mix-blend-soft-light" 
+             style="background-image: url('public/img/logo-masyumi.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(200%); transform: translate(50%, -50%) rotate(15deg);">
+        </div>
+        <div class="absolute bottom-1/4 left-1/4 w-32 h-32 md:w-48 md:h-48 opacity-15 mix-blend-soft-light" 
+             style="background-image: url('public/img/logo-nu.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(200%); transform: translate(-50%, 50%) rotate(10deg);">
+        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-32 h-32 md:w-48 md:h-48 opacity-15 mix-blend-soft-light" 
+             style="background-image: url('public/img/logo-pki.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(200%); transform: translate(50%, 50%) rotate(-10deg);">
+        </div>
+
+
+        <div class="text-center z-10 p-4 md:p-8 max-w-4xl mx-auto">
+            <h1 class="font-serif-title text-5xl md:text-7xl lg:text-8xl text-primary-sepia leading-tight text-shadow-strong">
+                PEMILU 1955
+            </h1>
+            <h2 class="text-xl md:text-4xl text-primary-sepia mt-2 mb-6 font-light italic text-shadow-medium">
+                Pesta Demokrasi Pertama Indonesia
+            </h2>
+            <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto text-shadow-medium">
+                Sebuah perjalanan untuk memahami bagaimana Indonesia pertama kali memilih.
+            </p>
+            <button onclick="document.getElementById('latar-belakang').scrollIntoView({ behavior: 'smooth' });" class="cta-button bg-highlight text-primary-sepia py-3 px-8 rounded-full text-xl font-semibold uppercase tracking-widest">
+                Mulai Penjelajahan
+            </button>
+        </div>
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="latar-belakang" class="min-h-screen pt-20 pb-16 px-4 md:px-12 lg:px-24">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Mengapa Harus Pemilu?
+        </h2>
+        
+        <div class="relative max-w-4xl mx-auto py-10 md:grid md:grid-cols-9 md:gap-y-8">
+            <div class="border-l-4 border-accent absolute h-full left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+            
+            <div class="timeline-item flex justify-start md:contents mb-10">
+                <div class="col-start-1 col-end-5 p-4 rounded-lg bg-secondary-sepia text-primary-sepia shadow-lg w-full md:w-auto md:ml-auto md:mr-6">
+                    <h3 class="font-serif-title text-2xl mb-1">1945-1950: Amanat Kemerdekaan</h3>
+                    <p>Konstitusi RIS dan UUD Sementara (UUDS 1950) mengamanatkan pelaksanaan pemilihan umum secepatnya untuk membentuk lembaga legislatif yang sah.</p>
+                </div>
+                <div class="col-start-5 col-end-6 md:flex items-center justify-center hidden">
+                    <div class="w-8 h-8 rounded-full bg-highlight shadow-lg border-4 border-primary-sepia z-10"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item flex justify-end md:contents mb-10">
+                <div class="col-start-5 col-end-6 md:flex items-center justify-center hidden">
+                    <div class="w-8 h-8 rounded-full bg-highlight shadow-lg border-4 border-primary-sepia z-10"></div>
+                </div>
+                <div class="col-start-6 col-end-10 p-4 rounded-lg bg-secondary-sepia text-primary-sepia shadow-lg w-full md:w-auto md:mr-auto md:ml-6">
+                    <h3 class="font-serif-title text-2xl mb-1">1950-1954: Kabinet Berganti</h3>
+                    <p>Ketidakstabilan politik (Kabinet Natsir, Sukiman, Wilopo, Ali I) menunda pelaksanaan pemilu. Fokus energi terpecah antara pembangunan dan mempertahankan kekuasaan.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex justify-start md:contents mb-10">
+                <div class="col-start-1 col-end-5 p-4 rounded-lg bg-secondary-sepia text-primary-sepia shadow-lg w-full md:w-auto md:ml-auto md:mr-6">
+                    <h3 class="font-serif-title text-2xl mb-1">1953: Kabinet Ali Sastroamidjojo I</h3>
+                    <p>Membentuk Panitia Pemilihan Indonesia (PPI) dan akhirnya berhasil menetapkan undang-undang pemilu. Persiapan dimulai secara serius!</p>
+                </div>
+                <div class="col-start-5 col-end-6 md:flex items-center justify-center hidden">
+                    <div class="w-8 h-8 rounded-full bg-highlight shadow-lg border-4 border-primary-sepia z-10"></div>
+                </div>
+            </div>
+            
+        </div> 
+        <div class="my-10 p-4 md:p-6 bg-white bg-opacity-70 backdrop-blur-sm fun-fact max-w-xl mx-auto shadow-md rounded-lg">
+             <p class="font-semibold text-lg text-highlight">💡 Fakta Unik:</p>
+            <p>Tingkat <strong>partisipasi Pemilu 1955 mencapai 91,5%</strong>! Sebuah rekor yang sulit dipecahkan, menunjukkan antusiasme rakyat akan demokrasi.</p>
+        </div>
+
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="raksasa" class="min-h-screen pt-20 pb-16 px-4 md:px-12 lg:px-24">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Arena Para Raksasa
+        </h2>
+        
+        <p class="text-center text-xl mb-12 max-w-3xl mx-auto text-secondary-sepia">
+            Lebih dari 100 partai, organisasi, dan perorangan ikut serta, namun empat partai besar mendominasi arena politik. Klik kartu untuk melihat profil singkat mereka.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            
+            <div data-party="pni" class="party-card bg-white p-6 rounded-xl shadow-xl text-center cursor-pointer border-4 border-transparent hover:border-highlight">
+                <img src="public/img/logo-pni.png" alt="Lambang PNI" class="mx-auto mb-4 w-32 h-32 sepia-filter object-contain">
+                <h3 class="font-serif-title text-2xl text-highlight">PNI</h3>
+                <p class="text-sm text-accent">Partai Nasional Indonesia</p>
+            </div>
+
+            <div data-party="masyumi" class="party-card bg-white p-6 rounded-xl shadow-xl text-center cursor-pointer border-4 border-transparent hover:border-highlight">
+                <img src="public/img/logo-masyumi.svg" alt="Lambang Masyumi" class="mx-auto mb-4 w-32 h-32 sepia-filter object-contain">
+                <h3 class="font-serif-title text-2xl text-highlight">Masyumi</h3>
+                <p class="text-sm text-accent">Majelis Syuro Muslimin Indonesia</p>
+            </div>
+
+            <div data-party="nu" class="party-card bg-white p-6 rounded-xl shadow-xl text-center cursor-pointer border-4 border-transparent hover:border-highlight">
+                <img src="public/img/logo-nu.svg" alt="Lambang NU" class="mx-auto mb-4 w-32 h-32 sepia-filter object-contain">
+                <h3 class="font-serif-title text-2xl text-highlight">NU</h3>
+                <p class="text-sm text-accent">Nahdlatul Ulama</p>
+            </div>
+
+            <div data-party="pki" class="party-card bg-white p-6 rounded-xl shadow-xl text-center cursor-pointer border-4 border-transparent hover:border-highlight">
+                <img src="public/img/logo-pki.svg" alt="Lambang PKI" class="mx-auto mb-4 w-32 h-32 sepia-filter object-contain">
+                <h3 class="font-serif-title text-2xl text-highlight">PKI</h3>
+                <p class="text-sm text-accent">Partai Komunis Indonesia</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="coblosan" class="min-h-screen pt-20 pb-16 px-4 md:px-12 lg:px-24 bg-secondary-sepia/10">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Dua Kali Coblosan
+        </h2>
+        
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto text-secondary-sepia">
+            Tahukah Anda? Pemilu 1955 terdiri dari dua kali pemilihan yang terpisah oleh waktu.
+        </p>
+
+        <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-xl">
+            <div class="flex border-b border-accent mb-6">
+                <button data-tab="dpr" class="tab-button active-tab py-2 px-6 font-semibold text-lg hover:bg-highlight/90 transition duration-300 rounded-t-lg">
+                    Pemilu DPR (September)
+                </button>
+                <button data-tab="konstituante" class="tab-button py-2 px-6 font-semibold text-lg hover:bg-gray-100 transition duration-300 rounded-t-lg">
+                    Pemilu Konstituante (Desember)
+                </button>
+            </div>
+
+            <div id="dpr-content" class="tab-content">
+                <h3 class="font-serif-title text-3xl mb-4 text-highlight">1. Memilih Anggota Parlemen (DPR)</h3>
+                <p class="mb-4">Tujuan pemilihan ini adalah untuk memilih 257 anggota Dewan Perwakilan Rakyat (DPR) yang akan bertugas sebagai badan legislatif dan pengawas eksekutif.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="font-bold text-accent mb-4">Hasil 4 Besar (257 Kursi):</p>
+                    <div class="space-y-3 bar-chart-container">
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">PNI</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-red-600 flex items-center justify-end pr-2" data-width="22.3%">
+                                    <span class="text-white text-xs font-bold">57</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">22.3%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">Masyumi</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-green-600 flex items-center justify-end pr-2" data-width="20.9%">
+                                    <span class="text-white text-xs font-bold">57</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">20.9%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">NU</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-green-800 flex items-center justify-end pr-2" data-width="18.4%">
+                                    <span class="text-white text-xs font-bold">45</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">18.4%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">PKI</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-red-800 flex items-center justify-end pr-2" data-width="16.4%">
+                                    <span class="text-white text-xs font-bold">39</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">16.4%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="konstituante-content" class="tab-content hidden">
+                <h3 class="font-serif-title text-3xl mb-4 text-highlight">2. Memilih Anggota Konstituante</h3>
+                <p class="mb-4">Tujuan pemilihan ini adalah memilih 514 anggota lembaga Konstituante yang bertugas membuat Undang-Undang Dasar (UUD) yang baru dan permanen menggantikan UUDS 1950.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="font-bold text-accent mb-4">Hasil 4 Besar (514 Kursi):</p>
+                    <div class="space-y-3 bar-chart-container">
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">PNI</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-red-600 flex items-center justify-end pr-2" data-width="23.9%">
+                                    <span class="text-white text-xs font-bold">119</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">23.9%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">Masyumi</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-green-600 flex items-center justify-end pr-2" data-width="22.2%">
+                                    <span class="text-white text-xs font-bold">112</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">22.2%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">NU</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-green-800 flex items-center justify-end pr-2" data-width="18.5%">
+                                    <span class="text-white text-xs font-bold">91</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">18.5%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-20 font-bold text-accent">PKI</span>
+                            <div class="flex-1 h-6 bg-accent bg-opacity-20 rounded overflow-hidden ml-2">
+                                <div class="bar-chart-bar h-full bg-red-800 flex items-center justify-end pr-2" data-width="16.0%">
+                                    <span class="text-white text-xs font-bold">80</span>
+                                </div>
+                            </div>
+                            <span class="w-12 text-right text-sm font-semibold ml-2">16.0%</span>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4">Hasil kursi Konstituante menunjukkan pola yang serupa. Sayangnya, Konstituante gagal mencapai kesepakatan dan dibubarkan pada 1959.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="galeri" class="min-h-screen pt-20 pb-16 px-4 md:px-12 lg:px-24">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Galeri Pesta Rakyat
+        </h2>
+
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto text-secondary-sepia">
+            Rasakan suasana antusiasme rakyat Indonesia yang pertama kali berpartisipasi dalam pesta demokrasi!
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <img src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/pemilu%201955.jpg" data-caption="Rakyat berbondong-bondong mengantre di TPS dengan tertib. Semangat demokrasi sangat terasa." class="gallery-photo w-full h-64 object-cover rounded shadow-lg cursor-pointer sepia-filter transition duration-300 hover:scale-[1.02] hover:filter-none">
+            <img src="https://assetd.kompas.id/Mt-uIscuaeT0HBA6znell1M-nWg=/fit-in/1024x816/filters:format(webp):quality(80)/https://asset.kgnewsroom.com/photo/pre/2023/12/11/e0e6856b-f42f-4cc3-8e22-35dfca4cc42c_jpg.jpg" data-caption="Surat suara yang ukurannya sangat besar, menandakan betapa pentingnya peristiwa ini." class="gallery-photo w-full h-64 object-cover rounded shadow-lg cursor-pointer sepia-filter transition duration-300 hover:scale-[1.02] hover:filter-none">
+            <img src="https://kompaspedia.kompas.id/wp-content/uploads/2023/12/Foto-3.jpg" data-caption="Suasana kampanye di jalanan yang ramai, penuh dengan poster dan bendera partai." class="gallery-photo w-full h-64 object-cover rounded shadow-lg cursor-pointer sepia-filter transition duration-300 hover:scale-[1.02] hover:filter-none">
+            <img src="https://asset.kompas.com/crops/4ecJcWnAasrPn8OHHwyTtU0Yaf0=/0x0:750x500/1200x800/data/photo/2022/01/15/61e2bde5c01d9.png" data-caption="Jari yang bertinta, bukti sah telah melaksanakan hak dan kewajiban sebagai warga negara (meski tinta baru populer di pemilu setelahnya, ini simbol partisipasi)." class="gallery-photo w-full h-64 object-cover rounded shadow-lg cursor-pointer sepia-filter transition duration-300 hover:scale-[1.02] hover:filter-none">
+        </div>
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="refleksi" class="pt-20 pb-20 px-4 md:px-12 lg:px-24 bg-secondary-sepia/10">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Warisan & Refleksi
+        </h2>
+
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+            <h3 class="font-serif-title text-3xl mb-4 text-accent">Mengapa disebut "Paling Demokratis"?</h3>
+            <p class="mb-4 text-secondary-sepia">
+                Pemilu 1955 diakui sebagai yang paling jujur, adil, dan paling partisipatif dalam sejarah modern Indonesia. Pelaksanaannya di tengah kondisi negara yang baru merdeka dan penuh konflik menunjukkan komitmen kuat seluruh elemen bangsa pada prinsip demokrasi.
+            </p>
+
+            <h3 class="font-serif-title text-3xl mb-4 text-accent mt-8">Apa yang Terjadi Setelahnya?</h3>
+            <p class="mb-6 text-secondary-sepia">
+                Meskipun sukses dalam pelaksanaan, lembaga Konstituante gagal mencapai kesepakatan mengenai dasar negara. Kebuntuan ini mengarah pada <strong>Dekrit Presiden 5 Juli 1959</strong>, yang membubarkan Konstituante dan kembali ke UUD 1945, menandai berakhirnya periode Demokrasi Parlementer yang singkat.
+            </p>
+
+            <div class="mt-10 p-6 bg-highlight/10 border-l-4 border-highlight rounded-lg">
+                <p class="font-serif-title text-2xl text-highlight mb-3">Sebuah Refleksi:</p>
+                <p class="text-lg font-semibold text-accent">
+                    "Apa yang bisa kita pelajari dari <strong>semangat demokrasi 1955</strong> — partisipasi tinggi, kejujuran, dan penghormatan pada proses — untuk pemilu hari ini?"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary-sepia my-16">
+
+    <section id="kuis" class="pt-20 pb-20 px-4 md:px-12 lg:px-24">
+        <h2 class="text-4xl md:text-5xl font-serif-title text-center mb-16 text-highlight border-b-2 border-accent pb-4">
+            Kuis Pengetahuan
+        </h2>
+
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+            
+            <form id="quiz-form">
+                <h3 class="font-serif-title text-3xl mb-6 text-accent">Bagian 1: Pilihan Ganda</h3>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">1. Berapa tingkat partisipasi pemilu 1955 yang tercatat dalam sejarah?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q1" value="a" class="mr-3"> A. 75.5%</label>
+                        <label><input type="radio" name="q1" value="b" class="mr-3"> B. 81.2%</label>
+                        <label><input type="radio" name="q1" value="c" class="mr-3"> C. 91.5%</label>
+                        <label><input type="radio" name="q1" value="d" class="mr-3"> D. 98.1%</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">2. Pemilu 1955 dilaksanakan dalam dua tahap. Tahap kedua (Desember) bertujuan untuk memilih apa?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q2" value="a" class="mr-3"> A. Presiden dan Wakil Presiden</label>
+                        <label><input type="radio" name="q2" value="b" class="mr-3"> B. Anggota DPR (Dewan Perwakilan Rakyat)</label>
+                        <label><input type="radio" name="q2" value="c" class="mr-3"> C. Anggota Senat RIS</label>
+                        <label><input type="radio" name="q2" value="d" class="mr-3"> D. Anggota Konstituante</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">3. Di bawah kabinet siapa Panitia Pemilihan Indonesia (PPI) dibentuk dan UU Pemilu ditetapkan?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q3" value="a" class="mr-3"> A. Kabinet Natsir</label>
+                        <label><input type="radio" name="q3" value="b" class="mr-3"> B. Kabinet Ali Sastroamidjojo I</label>
+                        <label><input type="radio" name="q3" value="c" class="mr-3"> C. Kabinet Wilopo</label>
+                        <label><input type="radio" name="q3" value="d" class="mr-3"> D. Kabinet Sukiman</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">4. Peristiwa apa yang secara resmi membubarkan Konstituante hasil Pemilu 1955?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q4" value="a" class="mr-3"> A. Dekrit Presiden 5 Juli 1959</label>
+                        <label><input type="radio" name="q4" value="b" class="mr-3"> B. Supersemar 1966</label>
+                        <label><input type="radio" name="q4" value="c" class="mr-3"> C. Pemilu 1971</label>
+                        <label><input type="radio" name="q4" value="d" class="mr-3"> D. Maklumat Wakil Presiden No. X</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">5. Manakah di antara berikut ini yang BUKAN termasuk dalam "Empat Besar" pemenang Pemilu 1955?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q5" value="a" class="mr-3"> A. PNI</label>
+                        <label><input type="radio" name="q5" value="b" class="mr-3"> B. Masyumi</label>
+                        <label><input type="radio" name="q5" value="c" class="mr-3"> C. PSI (Partai Sosialis Indonesia)</label>
+                        <label><input type="radio" name="q5" value="d" class="mr-3"> D. PKI</label>
+                    </div>
+                </div>
+                
+                <h3 class="font-serif-title text-3xl mt-12 mb-6 text-accent">Bagian 2: Pilihan Ganda Kompleks</h3>
+                <p class="text-sm text-secondary-sepia mb-4 italic">(Pilih semua jawaban yang benar)</p>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">6. Manakah dari partai berikut yang merupakan partai berbasis agama (Islam)?</p>
+                    <div class="quiz-options">
+                        <label><input type="checkbox" name="q6" value="a" class="mr-3"> A. PNI</label>
+                        <label><input type="checkbox" name="q6" value="b" class="mr-3"> B. Masyumi</label>
+                        <label><input type="checkbox" name="q6" value="c" class="mr-3"> C. NU (Nahdlatul Ulama)</label>
+                        <label><input type="checkbox" name="q6" value="d" class="mr-3"> D. PKI</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">7. Apa dua tujuan utama diadakannya Pemilu 1955?</p>
+                    <div class="quiz-options">
+                        <label><input type="checkbox" name="q7" value="a" class="mr-3"> A. Memilih anggota DPR</label>
+                        <label><input type="checkbox" name="q7" value="b" class="mr-3"> B. Mengganti UUD 1945</label>
+                        <label><input type="checkbox" name="q7" value="c" class="mr-3"> C. Memilih anggota Konstituante</label>
+                        <label><input type="checkbox" name="q7" value="d" class="mr-3"> D. Memilih Presiden secara langsung</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">8. Mengapa Pemilu 1955 sering disebut sebagai pemilu "paling demokratis"?</p>
+                    <div class="quiz-options">
+                        <label><input type="checkbox" name="q8" value="a" class="mr-3"> A. Tingkat partisipasi rakyat sangat tinggi (di atas 90%)</label>
+                        <label><input type="checkbox" name="q8" value="b" class="mr-3"> B. Diikuti oleh sangat sedikit partai politik</label>
+                        <label><input type="checkbox" name="q8" value="c" class="mr-3"> C. Dianggap berlangsung jujur dan adil (minim kecurangan)</label>
+                        <label><input type="checkbox" name="q8" value="d" class="mr-3"> D. Menghasilkan Soekarno sebagai Presiden</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">9. Manakah pasangan tokoh dan partai yang BENAR berdasarkan data di situs ini?</p>
+                    <div class="quiz-options">
+                        <label><input type="checkbox" name="q9" value="a" class="mr-3"> A. Soekarno - PNI</label>
+                        <label><input type="checkbox" name="q9" value="b" class="mr-3"> B. Mohammad Natsir - NU</label>
+                        <label><input type="checkbox" name="q9" value="c" class="mr-3"> C. D.N. Aidit - PKI</label>
+                        <label><input type="checkbox" name="q9" value="d" class="mr-3"> D. K.H. Wahab Hasbullah - Masyumi</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p class="font-semibold text-lg mb-2">10. Apa saja alasan yang menyebabkan Pemilu 1955 tertunda selama beberapa tahun?</p>
+                    <div class="quiz-options">
+                        <label><input type="checkbox" name="q10" value="a" class="mr-3"> A. Konstitusi (UUDS 1950) tidak mengizinkan pemilu</label>
+                        <label><input type="checkbox" name="q10" value="b" class="mr-3"> B. Ketidakstabilan politik dan seringnya kabinet berganti</label>
+                        <label><input type="checkbox" name="q10" value="c" class="mr-3"> C. Fokus energi bangsa terpecah untuk pembangunan</label>
+                        <label><input type="checkbox" name="q10" value="d" class="mr-3"> D. Belum terbentuknya Panitia Pemilihan Indonesia (PPI) hingga 1953</label>
+                    </div>
+                </div>
+
+                <div id="quiz-result-container" class="text-center mt-10 hidden">
+                    <h3 class="font-serif-title text-3xl text-accent mb-4">Hasil Kuis Anda</h3>
+                    <p id="quiz-result" class="text-2xl font-semibold text-highlight"></p>
+                    <p id="quiz-feedback" class="text-lg text-secondary-sepia mt-2"></p>
+                </div>
+
+                <div class="text-center mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button type="submit" class="quiz-submit-button">
+                        Kirim Jawaban
+                    </button>
+                    <button type="button" id="quiz-reset-button" class="quiz-reset-button">
+                        Reset
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="bg-secondary-sepia p-6 text-center text-primary-sepia text-sm">
+        <p>Mesin Waktu: Pesta Demokrasi 1955 &copy; 2025 | Dibuat dengan Muhammad Bintang.</p>
+        <p class="mt-1">Disclaimer: Gambar arsip diambil dari berbagai sumber media online.</p>
+    </footer>
+
+    <div id="party-modal" class="fixed inset-0 bg-accent bg-opacity-75 backdrop-blur-sm flex items-center justify-center z-50 hidden p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-xl shadow-2xl max-w-3xl w-full p-6 relative">
+            <button class="absolute top-3 right-3 text-3xl font-bold text-accent hover:text-highlight" onclick="closeModal()">
+                &times;
+            </button>
+            <h2 id="modal-title" class="font-serif-title text-4xl text-highlight mb-4 border-b pb-2 border-accent"></h2>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/3 text-center">
+                    <img id="modal-logo" src="" alt="Lambang Partai" class="w-24 h-24 mx-auto mb-4 sepia-filter object-contain">
+                    <p class="text-lg font-semibold mb-2">Ideologi:</p>
+                    <p id="modal-ideology" class="text-accent mb-4"></p>
+                    <p class="text-lg font-semibold mb-2">Tokoh Kunci:</p>
+                    <div id="modal-tokoh" class="text-accent"></div>
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h3 class="font-serif-title text-2xl mb-3 text-secondary-sepia">Tokoh pendiri (Contoh)</h3>
+                    <div id="modal-posters" class="flex justify-center md:justify-start">
+                        <!-- Gambar akan dimasukkan oleh JavaScript di sini -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-modal" class="fixed inset-0 bg-accent bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 hidden p-4 transition-opacity duration-300">
+        <div class="max-w-4xl w-full relative">
+             <button class="absolute -top-10 right-0 text-white text-4xl font-bold hover:text-highlight" onclick="closeGalleryModal()">
+                &times;
+            </button>
+            <img id="modal-image" src="" alt="Foto Pemilu 1955" class="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl border-4 border-primary-sepia">
+            <p id="modal-caption" class="text-center text-primary-sepia text-xl mt-4 bg-black bg-opacity-50 p-3 rounded-lg"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Logo PKI</title>
+  <desc id="desc">Lambang sederhana PKI dengan elemen bintang dan tulisan PKI.</desc>
+  <rect width="256" height="256" rx="24" fill="#b10f0f"/>
+  <circle cx="128" cy="104" r="64" fill="#f5d34a"/>
+  <polygon points="128,56 138,88 172,88 145,108 155,140 128,120 101,140 111,108 84,88 118,88" fill="#b10f0f"/>
+  <text x="128" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#f5d34a">PKI</text>
+</svg>

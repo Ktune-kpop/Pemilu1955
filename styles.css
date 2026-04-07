@@ -1,0 +1,172 @@
+﻿body {
+            background-color: #F5F5DC;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/light-paper-fibers.png');
+            background-repeat: repeat;
+        }
+        .sepia-filter {
+            filter: grayscale(80%) sepia(30%);
+            background-blend-mode: multiply;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+        .timeline-item {
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateY(20px);
+        }
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .party-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .party-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .fun-fact {
+            border-left: 5px solid #654321;
+        }
+        .bar-chart-bar {
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+        .text-shadow-medium {
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+        .active-tab {
+            background-color: #654321;
+            color: #F5F5DC;
+        }
+        .tab-button:not(.active-tab) {
+             background-color: white;
+             color: #654321;
+        }
+        
+        /* Styling Kuis */
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #A0522D;
+            padding-bottom: 1.5rem;
+        }
+        .quiz-question:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .quiz-options label {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1rem;
+            background-color: #F5F5DC;
+            border: 1px solid #A0522D;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .quiz-options label,
+        .quiz-question {
+            transition: all 0.25s ease;
+        }
+        .quiz-options label:hover {
+            background-color: #eaddc0;
+            border-color: #654321;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-options input[type="radio"],
+        .quiz-options input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: #654321;
+            transform: scale(1.2);
+        }
+        
+        /* Tombol Kirim Kuis */
+        .quiz-submit-button {
+            background-color: #654321;
+            color: #F5F5DC;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            transform: scale(1);
+            border: none;
+            cursor: pointer;
+        }
+        .quiz-submit-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+        .quiz-reset-button {
+            background-color: #E5E7EB;
+            color: #654321;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border: 1px solid #A0522D;
+            cursor: pointer;
+        }
+        .quiz-reset-button:hover {
+            background-color: #D1D5DB;
+            transform: scale(1.03);
+        }
+        .quiz-options label.correct {
+            background-color: #DCFCE7;
+            border-color: #16A34A;
+            color: #14532D;
+        }
+        .quiz-options label.correct:hover {
+            background-color: #DCFCE7;
+            border-color: #16A34A;
+            transform: none;
+            box-shadow: none;
+        }
+        .quiz-options label.incorrect {
+            background-color: #FEE2E2;
+            border-color: #DC2626;
+            color: #7F1D1D;
+        }
+        .quiz-options label.incorrect:hover {
+            background-color: #FEE2E2;
+            border-color: #DC2626;
+            transform: none;
+            box-shadow: none;
+        }
+        .quiz-question.unanswered {
+            border-left: 4px solid #DC2626;
+            padding-left: 0.75rem;
+            background-color: #FFF1F2;
+            border-radius: 8px;
+        }
+        .quiz-answer-key {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #166534;
+            font-weight: 600;
+        }
