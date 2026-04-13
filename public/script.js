@@ -3,21 +3,21 @@ const partyData = {
                 title: 'PNI - Partai Nasional Indonesia',
                 ideology: 'Nasionalis Sekuler',
                 tokoh: 'Soekarno, Sartono',
-                logo: 'public/img/logo-pni.png',
+                logo: 'img/logo-pni.png',
                 image: 'https://img.merahputih.com/media/71/73/54/717354a9feea6bd3e5b246670b1fb69a.jpg'
             },
             masyumi: {
                 title: 'Masyumi - Majelis Syuro Muslimin Indonesia',
                 ideology: 'Agama (Islam Modernis)',
                 tokoh: 'Mohammad Natsir, Syafruddin Prawiranegara',
-                logo: 'public/img/logo-masyumi.svg',
+                logo: 'img/logo-masyumi.svg',
                 image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Mohammad_Natsir_1950s.jpg/250px-Mohammad_Natsir_1950s.jpg'
             },
             nu: {
                 title: 'NU - Nahdlatul Ulama',
                 ideology: 'Agama (Islam Tradisionalis)',
                 tokoh: 'K.H. Wahab Hasbullah, K.H. Bisri Syansuri',
-                logo: 'public/img/logo-nu.svg',
+                logo: 'img/logo-nu.svg',
                 image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEholin_DWa57n1vNm2s7J86HgqLdVxCQxGxyp_aVp5WWU4tmyKREfhKd2qn1F9c1BJM-5GeGevrb4W6K1Nu1wwRjaXpjsQK4V54IkQZ6zhstljDskJNUyXHda6uMYeUJzNvmEJ4yuYcPw2E/s1600/KH-Wahab-hasbullah.jpg'
             },
             pki: {
@@ -412,6 +412,7 @@ const partyData = {
                 });
             }
         }
+
 
 
 
