@@ -25,7 +25,7 @@ const partyData = {
                 ideology: 'Komunis',
                 tokoh: 'Semaun, Darsono, Alimin',
                 logo: 'https://i.pinimg.com/474x/a7/a2/67/a7a267fd95e0c0fde61712a627468a0a.jpg',
-                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/DN_Aidit%2C_Njoto%2C_M.H._Lukman_and_Sudisman_%281963%29.jpg/320px-DN_Aidit%2C_Njoto%2C_M.H._Lukman_and_Sudisman_%281963%29.jpg'
+                image: 'https://img.okezone.com/content/2024/09/12/337/3062341/pendiri_sekaligus_ketua_umum_pki_pertama_semaoen-QgUb_large.jpeg'
             }
         };
 
@@ -412,6 +412,8 @@ const partyData = {
                 });
             }
         }
+
+
 
 
 
