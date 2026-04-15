@@ -180,9 +180,6 @@ const partyData = {
              console.error("Tombol hamburger, menu mobile, atau overlay tidak ditemukan!");
         }
 
-        // ==========================
-        // --- Logika Kuis Baru ---
-        // ==========================
         const quizForm = document.getElementById('quiz-form');
         const resultContainer = document.getElementById('quiz-result-container');
         const resultEl = document.getElementById('quiz-result');
