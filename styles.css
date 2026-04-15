@@ -60,7 +60,6 @@
              color: #654321;
         }
         
-        /* Styling Kuis */
         .quiz-question {
             margin-bottom: 1.5rem;
             border-bottom: 1px solid #A0522D;
@@ -100,7 +99,6 @@
             transform: scale(1.2);
         }
         
-        /* Tombol Kirim Kuis */
         .quiz-submit-button {
             background-color: #654321;
             color: #F5F5DC;
